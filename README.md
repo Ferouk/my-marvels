@@ -1,3 +1,11 @@
+## My Marvel
+
+<img src="https://github.com/Ferouk/my-marvels/raw/master/screenshots/Home.png">
+
+### Description
+I arrive at a page with the Marvel superheroes list. 
+In this list I have some information about the heroes and when I click on a hero I arrive at his page with more information. In this little app, I can add heroes to a favorite list.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
