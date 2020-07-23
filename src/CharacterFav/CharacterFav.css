@@ -1,0 +1,131 @@
+/* Character */
+.characters{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.character{
+    background-color: #fafafa;
+    width: 200px;
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    position: relative;
+}
+.character.fav:after{
+    content: "";
+    background-image: url("/star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    right:15px;
+    top:15px;
+
+}
+.character .cover{
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.8);
+    align-items: center;
+    justify-content: center;
+}
+.character .cover .seemore,
+.character .cover .favorite-add,
+.character .cover .favorite-remove{
+    display:block;
+    padding:0.35em 1.2em;
+    background: none;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align:center;
+    cursor: pointer;
+}
+.character .cover .favorite-add{
+    color:#3498db;
+    border:0.1em solid #3498db;
+}
+.character .cover .favorite-remove{
+    color:#e74c3c;
+    border:0.1em solid #e74c3c;
+}
+.character .cover .seemore{
+    color:#2ecc71;
+    border:0.1em solid #2ecc71;
+}
+.character:hover .cover{
+    visibility: visible;
+}
+.character img{
+    width: 200px;
+    height: 200px;
+}
+.character h2 {
+    color: #555;
+    font-size: 16px;
+}
+.character p {
+    font-size: 12px;
+    display: block;
+    padding: 5px;
+}
+
+.actions{
+    padding: 20px;
+}
+button.loadmore{
+    display:inline-block;
+    outline: none;
+    padding:0.35em 1.2em;
+    border:0.1em solid #fff;
+    background: none;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    font-size: 21px;
+    color:#fff;
+    text-align:center;
+    transition: all 0.2s;
+}
+button.loadmore:hover{
+    cursor: pointer;
+    color:#282c34;
+    background-color:#fff;
+}
+
+button.loadmore:disabled{
+   display: none;
+}
+
+.muted{
+    color: #ccc;
+}
+
+@media all and (max-width:30em){
+    a.button1{
+        display:block;
+        margin:0.4em auto;
+        }
+}
